@@ -16,7 +16,8 @@ const scssFiles = [
     './projectSkalar/scss/_grid.scss',
     './projectSkalar/scss/_interface.scss',
     './projectSkalar/scss/_fonts.scss',
-    './projectSkalar/scss/_colors.scss'
+    './projectSkalar/scss/_colors.scss',
+    './projectSkalar/scss/_header.scss'
 ];
 
 // Порядок подключения css файлов
@@ -35,6 +36,20 @@ const imgFiles = [
     './projectSkalar/images/*.jpg',
     './projectSkalar/images/*.png'
 ];
+
+// fontello
+const fonts = [
+    './projectSkalar/fonts/*.eot',
+    './projectSkalar/fonts/*.woff2',
+    './projectSkalar/fonts/*.woff',
+    './projectSkalar/fonts/*.ttf',
+    './projectSkalar/fonts/*.svg'
+];
+
+function fontello() {
+    return gulp.src(fonts)
+        .pipe(gulp.dest('./build/fonts'))
+}
 
 function img() {
     return gulp.src(imgFiles)
@@ -102,6 +117,8 @@ function watch() {
     gulp.watch("./*.html").on("change", browserSync.reload);
 }
 
+gulp.task('fontello', fontello)
+
 // Таск, вызывающий функцию cssStyles
 gulp.task('cssStyles', cssStyles)
 
@@ -122,7 +139,7 @@ gulp.task('del', clean);
 gulp.task('watch', watch);
 
 // Таск для удаления файлов в папке build и запуск styles, scripts
-gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, img, cssStyles)));
+gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, img, cssStyles, fontello)));
 
 // Таск запускает таск build и watch последовательно
 gulp.task('dev', gulp.series('build', 'watch'));
