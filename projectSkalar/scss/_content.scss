@@ -1,0 +1,419 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+aside {
+    width: 255px;
+}
+
+main {
+    width: 825px;
+}
+
+#minCost,
+#maxCost {
+    width: 90px;
+    height: 40px;
+    border-radius: 4px;
+    border: 2px solid #f5f5f5;
+    padding: 0 12px;
+    outline: none;
+}
+
+.filter {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    background-color: $white;
+    border-radius: 6px;
+    &-item {
+        border-bottom: 2px solid #f5f5f5;
+    }
+    &-title {
+        font-size: 14px;
+        @include bold;
+        color: $text-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        cursor: pointer;
+        text-transform: capitalize;
+        &:after {
+            content: "";
+            background: url(../images/accordion-arrow.png) no-repeat;
+            width: 10px;
+            height: 6px;
+            display: block;
+            transition: .2s;
+        }
+        &--open {
+            &:after {
+                transform: rotate(180deg) translateY(1px);
+            }
+        }
+    }
+    &-subitem {
+        display: none;
+        padding: 10px 20px 25px;
+        &--hide {
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: .3s;
+            &-open {
+                height: auto;
+                opacity: 1;
+            }
+        }
+        &--block {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &--label {
+            flex-basis: 50%;
+        }
+        &--check {
+            display: none;
+        }
+        &--name {
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: $text-color;
+            @include bold;
+            text-transform: capitalize;
+            &:before {
+                content: "";
+                width: 20px;
+                height: 20px;
+                border-radius: 4px;
+                border: 2px solid #f1f1f1;
+                margin-right: 20px;
+            }
+            &:after {
+                content: "";
+                background: url(../images/main-check.png) no-repeat center;
+                width: 10px;
+                height: 8px;
+                position: absolute;
+                left: 7px;
+            }
+        }
+        &--check:checked + span:before {
+            background-color: $hover-link;
+            border: 2px solid $hover-link;
+        }
+        &--check:checked + span:after {
+            left: 7px;
+        }
+        &--show {
+            margin-top: 5px;
+            font-size: 10px;
+            color: $header-color;
+            text-transform: uppercase;
+            letter-spacing: 1.25px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-left: 8px;
+            &:before {
+                content: "";
+                background: url(../images/accordion-plus.png) no-repeat center;
+                width: 8px;
+                height: 8px;
+                margin-right: 25px;
+            }
+        }
+    }
+    &-cost {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-line {
+        width: 9px;
+        height: 2px;
+        background-color: $text-color;
+    }
+}
+
+.top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    padding-left: 33px;
+    margin-bottom: 30px;
+}
+
+.content-menu {
+    display: flex;
+    &--item {
+        margin-right: 40px;
+    }
+    &--link {
+        color: $header-color-link;
+        font-size: 13px;
+        @include bold;
+        text-decoration: none;
+        &-active {
+            color: $hover-link;
+            &:after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                background-color: $hover-link;
+                display: block;
+                transform: translateY(20px);
+            }
+        }
+    }
+}
+
+.view {
+    display: flex;
+    align-items: center;
+    &-img {
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-left: 2px solid #f5f5f5;
+        cursor: pointer;
+        &--cascade {
+            background: url(../images/main-cascade-gray.png) no-repeat center;
+            &-active {
+                background: url(../images/main-cascade.png) no-repeat center;
+            }
+        }
+        &--list {
+            background: url(../images/main-list.png) no-repeat center;
+            &-active {
+                background: url(../images/main-list-blue.png) no-repeat center;
+            }
+        }
+    }
+}
+
+.smartcards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: $white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    width: 255px;
+    padding: 20px 20px 38px;
+    margin-bottom: 30px;
+    img {
+        display: block;
+    }
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        align-items: center;
+        &--sale {
+            background-color: #f7f7f7;
+            border-radius: 4px;
+            padding: 5px 9px;
+            color: $header-color;
+            font-size: 10px;
+            text-transform: uppercase;
+            @include bold;
+        }
+        &--like {
+            display: flex;
+            align-items: center;
+            &-img {
+                margin-left: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+    &-img {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    &-title {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 25px;
+        &--link {
+            color: $text-color;
+            @include bold;
+            text-decoration: none;
+            transition: .2s;
+            &:hover {
+                color: $hover-link;
+            }
+        }
+    }
+    &-raiting {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        &--stars {
+            width: 115px;
+            height: 19px;
+            background: url(../images/raiting-star.png);
+            position: relative;
+            display: flex;
+            &-item {
+                height: 19px;
+                width: 20px;
+            }
+            &-current {
+                background: url(../images/raiting-star.png) left bottom;
+                z-index: 1;
+                width: 68%;
+            }
+            &-pos {
+                position: absolute;
+                z-index: 5;
+                display: block;
+                width: 23px;
+                height: 19px;
+                cursor: pointer;
+                &:hover {
+                    left: 0;
+                    z-index: 10;
+                    background: url(../images/raiting-star.png) left bottom;
+                }
+            }
+            &-1 {
+                left: 0;
+                &:hover {
+                    width: 23px;
+                }
+            }
+            &-2 {
+                left: 23px;
+                &:hover {
+                    width: 46px;
+                }
+            }
+            &-3 {
+                left: 46px;
+                &:hover {
+                    width: 69px;
+                }
+            }
+            &-4 {
+                left: 69px;
+                &:hover {
+                    width: 92px;
+                }
+            }
+            &-5 {
+                left: 92px;
+                &:hover {
+                    width: 115px;
+                }
+            }
+        }
+        &--votes {
+            color: $header-color;
+            font-size: 12px;
+            @include bold;
+            letter-spacing: 0.12px;
+            display: block;
+            line-height: 12px;
+            margin-left: 12px;
+        }
+    }
+    &-price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--num {
+            color: $text-color;
+            font-size: 16px;
+            letter-spacing: 0.16px;
+            @include bold;
+            margin-right: 15px;
+        }
+    }
+}
+
+.paginations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 42px;
+    min-height: 60px;
+    background-color: $white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    &-item {
+        font-size: 14px;
+        color: $text-color;
+        @include bold;
+        letter-spacing: 1.75px;
+        &--center {
+            border-right: 2px solid #f5f5f5;
+            border-left: 2px solid #f5f5f5;
+            height: 60px;
+            line-height: 60px;
+            padding: 0 30px;
+        }
+    }
+    &-link {
+        font-size: 10px;
+        letter-spacing: 1.25px;
+        text-transform: uppercase;
+        color: $header-color;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        &--text {
+            margin-left: 20px;
+            &-right {
+                margin-left: 0;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

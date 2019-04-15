@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
     <link rel="stylesheet" href="build/css/normalize.css">
+    <link rel="stylesheet" href="build/css/range.css">
     <link rel="stylesheet" href="build/css/style.css">
     <title>Smartphones</title>
 </head>
@@ -125,9 +126,9 @@
                     </li>
                 </ul>
                 <div class="dropmenu">
-                    <div class="dropmenu-item dropmenu-help">
+                    <div class="dropmenu-item">
                         <span class="dropmenu-item--title">Help</span>
-                        <ul class="dropmenu-item--list dropmenu-item--help">
+                        <ul class="dropmenu-item--list">
                             <li class="dropmenu-item--list-open">
                                 <a href="#" class="dropmenu-item--list-link">Item 1</a>
                             </li>
@@ -139,9 +140,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="dropmenu-item dropmenu-money">
-                        <span class="dropmenu-item--title dropmenu-item--title-money">USD</span>
-                        <ul class="dropmenu-item--list dropmenu-item--money">
+                    <div class="dropmenu-item">
+                        <span class="dropmenu-item--title">USD</span>
+                        <ul class="dropmenu-item--list">
                             <li class="dropmenu-item--list-open">
                                 <a href="#" class="dropmenu-item--list-link">RU</a>
                             </li>
@@ -154,8 +155,8 @@
                         </ul>
                     </div>
                     <div class="dropmenu-item dropmenu-lang">
-                        <span class="dropmenu-item--title dropmenu-item--title-lang">Language</span>
-                        <ul class="dropmenu-item--list dropmenu-item--lang">
+                        <span class="dropmenu-item--title">Language</span>
+                        <ul class="dropmenu-item--list">
                             <li class="dropmenu-item--list-open">
                                 <a href="#" class="dropmenu-item--list-link">Russian</a>
                             </li>
@@ -173,8 +174,963 @@
     </header>
     <!-- /.header -->
     
+    <div class="breadshare container">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+                <a href="#" class="breadcrumbs-link">Main</a>
+            </li>
+            <li class="breadcrumbs-item">
+                <a href="#" class="breadcrumbs-link">Mobile phones</a>
+            </li>
+            <li class="breadcrumbs-item">
+                <a href="#" class="breadcrumbs-link">Apple</a>
+            </li>
+            <li class="breadcrumbs-item">
+                <a href="#" class="breadcrumbs-link breadcrumbs-link--active">Apple iPhone 7, 128 GB</a>
+            </li>
+        </ul>
+        <div class="share">
+            <span class="share-title">Share:</span>
+            <ul class="share-list">
+                <li class="share-list--item">
+                    <a href="#" class="share-list--link">
+                        <img src="build/images/main-facebook.png" alt="Main Facebook">
+                        <span class="share-list--like">45</span>
+                    </a>
+                </li>
+                <li class="share-list--item">
+                    <a href="#" class="share-list--link">
+                        <img src="build/images/main-twitter.png" alt="Main Twitter">
+                        <span class="share-list--like">12</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.breadshare -->
+    
+    <div class="container">
+        <div class="page">
+            <h1 class="page-title">Smartphones</h1>
+        </div>
+        <div class="content">
+            <aside>
+                <ul class="filter">
+                    <li class="filter-item">
+                        <span class="filter-title">Price</span>
+                        <form class="filter-subitem">
+                            <div id="slider"></div>
+                            <div class="filter-cost">
+                                <input type="text" id="minCost" value="$ 0">
+                                <span class="filter-line"></span>
+                                <input type="text" id="maxCost" value="$ 1000">
+                            </div>
+                        </form>
+                    </li>
+                    <li class="filter-item">
+                        <span class="filter-title">Brand</span>
+                        <form class="filter-subitem">
+                            <div class="filter-subitem--block">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Apple</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Sony</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Asus</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">LG</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--block filter-subitem--hide">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Lenovo</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Meizu</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Xiaomi</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">HTC</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--show">Show more</div>
+                        </form>
+                    </li>
+                    <li class="filter-item">
+                        <span class="filter-title">Color</span>
+                        <form class="filter-subitem">
+                            <div class="filter-subitem--block">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Ivory</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Deep grey</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Coffee</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Red</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--block filter-subitem--hide">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Pink</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Yellow</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Green</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Black</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--show">Show more</div>
+                        </form>
+                    </li>
+                    <li class="filter-item">
+                        <span class="filter-title">Body weight</span>
+                        <form class="filter-subitem">
+                            <div class="filter-subitem--block">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Ivory</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Deep grey</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Coffee</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Red</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--block filter-subitem--hide">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Pink</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Yellow</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Green</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Black</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--show">Show more</div>
+                        </form>
+                    </li>
+                    <li class="filter-item">
+                        <span class="filter-title">CPU cores</span>
+                        <form class="filter-subitem">
+                            <div class="filter-subitem--block">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Ivory</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Deep grey</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Coffee</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Red</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--block filter-subitem--hide">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Pink</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Yellow</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Green</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Black</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--show">Show more</div>
+                        </form>
+                    </li>
+                    <li class="filter-item">
+                        <span class="filter-title">CPU type</span>
+                        <form class="filter-subitem">
+                            <div class="filter-subitem--block">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Ivory</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Deep grey</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Coffee</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Red</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--block filter-subitem--hide">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Pink</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Yellow</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Green</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Black</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--show">Show more</div>
+                        </form>
+                    </li>
+                    <li class="filter-item">
+                        <span class="filter-title">Screen size</span>
+                        <form class="filter-subitem">
+                            <div class="filter-subitem--block">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Ivory</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Deep grey</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Coffee</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Red</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--block filter-subitem--hide">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Pink</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Yellow</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Green</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Black</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--show">Show more</div>
+                        </form>
+                    </li>
+                    <li class="filter-item">
+                        <span class="filter-title">Operation system</span>
+                        <form class="filter-subitem">
+                            <div class="filter-subitem--block">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Ivory</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Deep grey</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Coffee</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Red</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--block filter-subitem--hide">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Pink</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Yellow</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Green</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Black</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--show">Show more</div>
+                        </form>
+                    </li>
+                    <li class="filter-item">
+                        <span class="filter-title">Cellular</span>
+                        <form class="filter-subitem">
+                            <div class="filter-subitem--block">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Ivory</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Deep grey</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Coffee</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Red</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--block filter-subitem--hide">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Pink</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Yellow</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Green</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Black</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--show">Show more</div>
+                        </form>
+                    </li>
+                    <li class="filter-item">
+                        <span class="filter-title">Ram</span>
+                        <form class="filter-subitem">
+                            <div class="filter-subitem--block">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Ivory</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Deep grey</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Coffee</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Red</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--block filter-subitem--hide">
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Pink</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Yellow</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Green</span>
+                                </label>
+                                <label class="filter-subitem--label">
+                                    <input type="checkbox" name="brand" class="filter-subitem--check">
+                                    <span class="filter-subitem--name">Black</span>
+                                </label>
+                            </div>
+                            <div class="filter-subitem--show">Show more</div>
+                        </form>
+                    </li>
+                </ul>
+            </aside>
+            <main>
+                <div class="top-menu">
+                    <ul class="content-menu">
+                        <li class="content-menu--item">
+                            <a href="#" class="content-menu--link content-menu--link-active">Popular products</a>
+                        </li>
+                        <li class="content-menu--item">
+                            <a href="#" class="content-menu--link">Low price</a>
+                        </li>
+                        <li class="content-menu--item">
+                            <a href="#" class="content-menu--link">High price</a>
+                        </li>
+                    </ul>
+                    <div class="view">
+                        <span class="view-img view-img--cascade view-img--cascade-active"></span>
+                        <span class="view-img view-img--list"></span>
+                    </div>
+                </div>
+                <!-- /.top-menu -->
+                <div class="smartcards">
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-top--sale">Sale 10%</div>
+                            <div class="card-top--like">
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-list.png" alt="Card list">
+                                </div>
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-heart.png" alt="Card heart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <img src="build/images/card-1.png" alt="Smart 1">
+                        </div>
+                        <h4 class="card-title">
+                            <a href="#" class="card-title--link">Asus ZenFone Go ZB452KG (black and white)</a>
+                        </h4>
+                        <div class="card-raiting">
+                            <ul class="card-raiting--stars">
+                                <li class="card-raiting--stars-item card-raiting--stars-current">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-1"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-2"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-3"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-4"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-5"></span>
+                                </li>
+                            </ul>
+                            <span class="card-raiting--votes">12</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="card-price--num">$ 384.4</span>
+                            <img src="build/images/card-basket.png" alt="Card basket">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-top--sale">Sale 10%</div>
+                            <div class="card-top--like">
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-list.png" alt="Card list">
+                                </div>
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-heart.png" alt="Card heart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <img src="build/images/card-2.png" alt="Smart 1">
+                        </div>
+                        <h4 class="card-title">
+                            <a href="#" class="card-title--link">Asus ZenFone Go ZB452KG (black and white)</a>
+                        </h4>
+                        <div class="card-raiting">
+                            <ul class="card-raiting--stars">
+                                <li class="card-raiting--stars-item card-raiting--stars-current">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-1"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-2"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-3"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-4"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-5"></span>
+                                </li>
+                            </ul>
+                            <span class="card-raiting--votes">12</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="card-price--num">$ 384.4</span>
+                            <img src="build/images/card-basket.png" alt="Card basket">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-top--sale">Sale 10%</div>
+                            <div class="card-top--like">
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-list.png" alt="Card list">
+                                </div>
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-heart.png" alt="Card heart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <img src="build/images/card-3.png" alt="Smart 1">
+                        </div>
+                        <h4 class="card-title">
+                            <a href="#" class="card-title--link">Asus ZenFone Go ZB452KG (black and white)</a>
+                        </h4>
+                        <div class="card-raiting">
+                            <ul class="card-raiting--stars">
+                                <li class="card-raiting--stars-item card-raiting--stars-current">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-1"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-2"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-3"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-4"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-5"></span>
+                                </li>
+                            </ul>
+                            <span class="card-raiting--votes">12</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="card-price--num">$ 384.4</span>
+                            <img src="build/images/card-basket.png" alt="Card basket">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-top--sale">Sale 10%</div>
+                            <div class="card-top--like">
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-list.png" alt="Card list">
+                                </div>
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-heart.png" alt="Card heart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <img src="build/images/card-4.png" alt="Smart 1">
+                        </div>
+                        <h4 class="card-title">
+                            <a href="#" class="card-title--link">Asus ZenFone Go ZB452KG (black and white)</a>
+                        </h4>
+                        <div class="card-raiting">
+                            <ul class="card-raiting--stars">
+                                <li class="card-raiting--stars-item card-raiting--stars-current">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-1"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-2"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-3"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-4"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-5"></span>
+                                </li>
+                            </ul>
+                            <span class="card-raiting--votes">12</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="card-price--num">$ 384.4</span>
+                            <img src="build/images/card-basket.png" alt="Card basket">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-top--sale">Sale 10%</div>
+                            <div class="card-top--like">
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-list.png" alt="Card list">
+                                </div>
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-heart.png" alt="Card heart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <img src="build/images/card-5.png" alt="Smart 1">
+                        </div>
+                        <h4 class="card-title">
+                            <a href="#" class="card-title--link">Asus ZenFone Go ZB452KG (black and white)</a>
+                        </h4>
+                        <div class="card-raiting">
+                            <ul class="card-raiting--stars">
+                                <li class="card-raiting--stars-item card-raiting--stars-current">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-1"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-2"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-3"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-4"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-5"></span>
+                                </li>
+                            </ul>
+                            <span class="card-raiting--votes">12</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="card-price--num">$ 384.4</span>
+                            <img src="build/images/card-basket.png" alt="Card basket">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-top--sale">Sale 10%</div>
+                            <div class="card-top--like">
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-list.png" alt="Card list">
+                                </div>
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-heart.png" alt="Card heart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <img src="build/images/card-6.png" alt="Smart 1">
+                        </div>
+                        <h4 class="card-title">
+                            <a href="#" class="card-title--link">Asus ZenFone Go ZB452KG (black and white)</a>
+                        </h4>
+                        <div class="card-raiting">
+                            <ul class="card-raiting--stars">
+                                <li class="card-raiting--stars-item card-raiting--stars-current">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-1"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-2"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-3"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-4"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-5"></span>
+                                </li>
+                            </ul>
+                            <span class="card-raiting--votes">12</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="card-price--num">$ 384.4</span>
+                            <img src="build/images/card-basket.png" alt="Card basket">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-top--sale">Sale 10%</div>
+                            <div class="card-top--like">
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-list.png" alt="Card list">
+                                </div>
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-heart.png" alt="Card heart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <img src="build/images/card-7.png" alt="Smart 1">
+                        </div>
+                        <h4 class="card-title">
+                            <a href="#" class="card-title--link">Asus ZenFone Go ZB452KG (black and white)</a>
+                        </h4>
+                        <div class="card-raiting">
+                            <ul class="card-raiting--stars">
+                                <li class="card-raiting--stars-item card-raiting--stars-current">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-1"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-2"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-3"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-4"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-5"></span>
+                                </li>
+                            </ul>
+                            <span class="card-raiting--votes">12</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="card-price--num">$ 384.4</span>
+                            <img src="build/images/card-basket.png" alt="Card basket">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-top--sale">Sale 10%</div>
+                            <div class="card-top--like">
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-list.png" alt="Card list">
+                                </div>
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-heart.png" alt="Card heart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <img src="build/images/card-8.png" alt="Smart 1">
+                        </div>
+                        <h4 class="card-title">
+                            <a href="#" class="card-title--link">Asus ZenFone Go ZB452KG (black and white)</a>
+                        </h4>
+                        <div class="card-raiting">
+                            <ul class="card-raiting--stars">
+                                <li class="card-raiting--stars-item card-raiting--stars-current">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-1"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-2"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-3"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-4"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-5"></span>
+                                </li>
+                            </ul>
+                            <span class="card-raiting--votes">12</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="card-price--num">$ 384.4</span>
+                            <img src="build/images/card-basket.png" alt="Card basket">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="card-top--sale">Sale 10%</div>
+                            <div class="card-top--like">
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-list.png" alt="Card list">
+                                </div>
+                                <div class="card-top--like-img">
+                                    <img src="build/images/card-heart.png" alt="Card heart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <img src="build/images/card-9.png" alt="Smart 1">
+                        </div>
+                        <h4 class="card-title">
+                            <a href="#" class="card-title--link">Asus ZenFone Go ZB452KG (black and white)</a>
+                        </h4>
+                        <div class="card-raiting">
+                            <ul class="card-raiting--stars">
+                                <li class="card-raiting--stars-item card-raiting--stars-current">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-1"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-2"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-3"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-4"></span>
+                                </li>
+                                <li class="card-raiting--stars-item">
+                                    <span class="card-raiting--stars-pos card-raiting--stars-5"></span>
+                                </li>
+                            </ul>
+                            <span class="card-raiting--votes">12</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="card-price--num">$ 384.4</span>
+                            <img src="build/images/card-basket.png" alt="Card basket">
+                        </div>
+                    </div>
+                </div>
+                <!-- /.smartcards -->
+                <ul class="paginations">
+                    <li class="paginations-item">
+                        <a href="#" class="paginations-link">
+                            <img src="build/images/left-arrow.png" alt="Left arrow">
+                            <span class="paginations-link--text">Previous page</span>
+                        </a>
+                    </li>
+                    <li class="paginations-item paginations-item--center">1</li>
+                    <li class="paginations-item">
+                        <a href="#" class="paginations-link">
+                            <span class="paginations-link--text paginations-link--text-right">Next page</span>
+                            <img src="build/images/right-arrow.png" alt="Right right">
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.paginations -->
+            </main>
+        </div>
+    </div>
+    <!-- /.content -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-main container">
+                <div class="logo footer-logo">
+                    <a href="index.html" class="logo-link">Quantum</a>
+                </div>
+                <ul class="footer-menu">
+                    <li class="footer-menu--item">
+                        <a href="#" class="footer-menu--link">Shop</a>
+                        <ul class="footer-menu--dropdown">
+                            <li class="footer-menu--dropdown-item">
+                                <a href="#" class="footer-menu--dropdown-link">Item</a>
+                            </li>
+                            <li class="footer-menu--dropdown-item">
+                                <a href="#" class="footer-menu--dropdown-link">Item</a>
+                            </li>
+                            <li class="footer-menu--dropdown-item">
+                                <a href="#" class="footer-menu--dropdown-link">Item</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer-menu--item">
+                        <a href="#" class="footer-menu--link">Journal</a>
+                    </li>
+                    <li class="footer-menu--item">
+                        <a href="#" class="footer-menu--link">About</a>
+                    </li>
+                    <li class="footer-menu--item">
+                        <a href="#" class="footer-menu--link">Contacts</a>
+                    </li>
+                </ul>
+                <ul class="footer-social">
+                    <li class="footer-social--item">
+                        <a href="#" class="footer-social--link">
+                            <img src="build/images/footer-facebook.png" alt="Fb">
+                        </a>
+                    </li>
+                    <li class="footer-social--item">
+                        <a href="#" class="footer-social--link">
+                            <img src="build/images/footer-twitter.png" alt="Tw">
+                        </a>
+                    </li>
+                    <li class="footer-social--item">
+                        <a href="#" class="footer-social--link">
+                            <img src="build/images/footer-inst.png" alt="Inst">
+                        </a>
+                    </li>
+                    <li class="footer-social--item">
+                        <a href="#" class="footer-social--link">
+                            <img src="build/images/footer-youtube.png" alt="You">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <ul class="copy">
+                <li class="copy-item copy-item--li">&copy; 2016. Quantum UI kit</li>
+                <li class="copy-item">
+                    <a href="#" class="copy-link">Privacy Policy</a>
+                </li>
+                <li class="copy-item">
+                    <a href="#" class="copy-link">Terms of Use</a>
+                </li>
+            </ul>
+            <ul class="payment">
+                <li class="payment-item payment-item--li">Accepted payment methods</li>
+                <li class="payment-item">
+                    <a href="#" class="payment-link">
+                        <img src="build/images/footer-visa.png" alt="Visa">
+                    </a>
+                </li>
+                <li class="payment-item">
+                    <a href="#" class="payment-link">
+                        <img src="build/images/footer-mastercard.png" alt="Mastercard">
+                    </a>
+                </li>
+                <li class="payment-item">
+                    <a href="#" class="payment-link">
+                        <img src="build/images/footer-paypall.png" alt="Paypall">
+                    </a>
+                </li>
+                <li class="payment-item">
+                    <a href="#" class="payment-link">
+                        <img src="build/images/footer-amazon.png" alt="Amazon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- /.footer -->
+    
     
     <script src="build/js/jquery-3.3.1.min.js"></script>
+    <script src="build/js/jquery-ui.min.js"></script>
     <script src="build/js/script.js"></script>
 </body>
 </html>

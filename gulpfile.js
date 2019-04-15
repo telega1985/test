@@ -17,17 +17,22 @@ const scssFiles = [
     './projectSkalar/scss/_interface.scss',
     './projectSkalar/scss/_fonts.scss',
     './projectSkalar/scss/_colors.scss',
-    './projectSkalar/scss/_header.scss'
+    './projectSkalar/scss/_header.scss',
+    './projectSkalar/scss/_breadshare.scss',
+    './projectSkalar/scss/_content.scss',
+    './projectSkalar/scss/_footer.scss'
 ];
 
 // Порядок подключения css файлов
 const cssFiles = [
-    './projectSkalar/css/normalize.css'
+    './projectSkalar/css/normalize.css',
+    './projectSkalar/css/range.css'
 ];
 
 // Порядок подключения js файлов
 const jsFiles = [
     './projectSkalar/js/script.js',
+    './projectSkalar/js/jquery-ui.min.js',
     './projectSkalar/js/jquery-3.3.1.min.js'
 ];
 
@@ -37,20 +42,6 @@ const imgFiles = [
     './projectSkalar/images/*.png'
 ];
 
-// fontello
-const fonts = [
-    './projectSkalar/fonts/*.eot',
-    './projectSkalar/fonts/*.woff2',
-    './projectSkalar/fonts/*.woff',
-    './projectSkalar/fonts/*.ttf',
-    './projectSkalar/fonts/*.svg'
-];
-
-function fontello() {
-    return gulp.src(fonts)
-        .pipe(gulp.dest('./build/fonts'))
-}
-
 function img() {
     return gulp.src(imgFiles)
         .pipe(gulp.dest('./build/images'))
@@ -59,6 +50,7 @@ function img() {
 function cssStyles() {
     return gulp.src(cssFiles)
     .pipe(gulp.dest('./build/css'))
+    .pipe(browserSync.stream());
 }
 
 
@@ -109,6 +101,8 @@ function watch() {
             baseDir: "./"
         }
     });
+    // Следить за CSS-файлами
+    gulp.watch('./projectSkalar/css/**/*.css', cssStyles)
     // Следить за SCSS-файлами
     gulp.watch('./projectSkalar/scss/**/*.scss', styles)
     // Следить за JS-файлами
@@ -116,8 +110,6 @@ function watch() {
     // При изменении HTML запустить синхонизацию
     gulp.watch("./*.html").on("change", browserSync.reload);
 }
-
-gulp.task('fontello', fontello)
 
 // Таск, вызывающий функцию cssStyles
 gulp.task('cssStyles', cssStyles)
@@ -139,7 +131,7 @@ gulp.task('del', clean);
 gulp.task('watch', watch);
 
 // Таск для удаления файлов в папке build и запуск styles, scripts
-gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, img, cssStyles, fontello)));
+gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, img, cssStyles)));
 
 // Таск запускает таск build и watch последовательно
 gulp.task('dev', gulp.series('build', 'watch'));

@@ -8,6 +8,29 @@ img {
     max-width: 100%;
 }
 
+.page {
+    display: flex;
+    justify-content: center;
+    &-title {
+        margin: 0;
+        color: $text-color;
+        font-size: 30px;
+        @include light;
+        padding-bottom: 110px;
+        position: relative;
+        &:after {
+            content: "";
+            width: 68px;
+            height: 2px;
+            background-color: $hover-link;
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 55px);
+        }
+    }
+}
+
 
 
 

@@ -38,30 +38,122 @@ $(document).ready(function() {
     
     // Dropmenu in header-bottom
     
-    $(".dropmenu-money").on("click", function() {
-        $(this).toggleClass("dropmenu-money--open");
-        $(".dropmenu-item--money").toggleClass("dropmenu-item--money-drop");
+    $(".dropmenu-item").on("click", function(e) {
+        e.preventDefault();
+        $(this).toggleClass("dropmenu-item--open");
+        $(this).children(".dropmenu-item--list").toggleClass("dropmenu-item--list-drop");
     });
     
-    $(".dropmenu-item--money a").on("click", function() {
-        var money = $(this).text();
-        $(".dropmenu-item--title-money").text(money);
+    $(".dropmenu-item--list-link").on("click", function(e) {
+        e.preventDefault();
+        var valText = $(this).text();
+        $(this).parent(".dropmenu-item--list-open").parent(".dropmenu-item--list").siblings(".dropmenu-item--title").text(valText);
     });
     
+    // input type="range"
     
-    $(".dropmenu-lang").on("click", function() {
-        $(this).toggleClass("dropmenu-lang--open");
-        $(".dropmenu-item--lang").toggleClass("dropmenu-item--lang-drop");
+    $("#slider").slider({
+        min: 0,
+        max: 1000,
+        values: [0,1000],
+        range: true,
+        stop: function(event, ui) {
+            $("#minCost").val($("#slider").slider("values",0));
+		    $("#maxCost").val($("#slider").slider("values",1));
+        },
+        slide: function(event, ui) {
+            $("#minCost").val($("#slider").slider("values",0));
+		    $("#maxCost").val($("#slider").slider("values",1));
+        }
     });
     
-    $(".dropmenu-item--lang a").on("click", function() {
-        var lang = $(this).text();
-        $(".dropmenu-item--title-lang").text(lang);
+    // Привязываем ползунки к инпутам
+    
+    $("#minCost").change(function() {
+        var value1 = $("#minCost").val();
+        var value2 = $("#maxCost").val();
+
+        if (parseInt(value1) > parseInt(value2)) {
+            value1 = value2;
+            $("#minCost").val(value1);
+        }
+        $("#slider").slider("values",0,value1);	
+    });
+
+	
+    $("#maxCost").change(function() {
+        var value1 = $("#minCost").val();
+        var value2 = $("#maxCost").val();
+
+        if (value2 > 1000) { value2 = 1000; $("#maxCost").val(1000)}
+
+        if (parseInt(value1) > parseInt(value2)) {
+            value2 = value1;
+            $("#maxCost").val(value2);
+        }
+        $("#slider").slider("values",1,value2);
     });
     
-    $(".dropmenu-help").on("click", function() {
-        $(this).toggleClass("dropmenu-help--open");
-        $(".dropmenu-item--help").toggleClass("dropmenu-item--help-drop");
+    // Добавляем чекбоксы по клику
+    
+    $(".filter-subitem--show").on("click", function() {
+        $(this).siblings(".filter-subitem--hide").toggleClass("filter-subitem--hide-open");
+        $(this).remove();
+    });
+    
+    // Menu accordion
+    
+    $(".filter-title").on("click", function() {
+        $(this).toggleClass("filter-title--open").next(".filter-subitem").slideToggle(200);
+    });
+    
+    // List-Cascade
+    
+    $(".view-img--cascade").on("click", function() {
+        $(this).addClass("view-img--cascade-active");
+        $(".view-img--list").removeClass("view-img--list-active");
+    });
+    
+    $(".view-img--list").on("click", function() {
+        $(this).addClass("view-img--list-active");
+        $(".view-img--cascade").removeClass("view-img--cascade-active");
+    });
+    
+    // Footer dropdown
+    
+    $(".footer-menu--item").on("click", function(e) {
+        e.preventDefault();
+        $(this).toggleClass("footer-menu--item-open").children(".footer-menu--dropdown").toggleClass("footer-menu--dropdown-open");
     });
     
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
