@@ -1,6 +1,8 @@
 .breadshare {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 50px 10px 90px;
 }
 
@@ -83,7 +85,23 @@
     }
 }
 
+@media (max-width: 758px) {
+    .breadshare {
+        justify-content: center;
+        padding: 20px;
+    }
+    .breadcrumbs {
+        margin-bottom: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+}
 
+@media (max-width: 502px) {
+    .breadcrumbs {
+        display: none;
+    }
+}
 
 
 

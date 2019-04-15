@@ -126,6 +126,20 @@ $(document).ready(function() {
         $(this).toggleClass("footer-menu--item-open").children(".footer-menu--dropdown").toggleClass("footer-menu--dropdown-open");
     });
     
+    // responsive header-menu
+    
+    $(".resp-menu--button").on("click", function() {
+        $(this).toggleClass("categories-block--open");
+        $(".menu").slideToggle(100);
+    });
+    
+    // responsive left-menu
+    
+    $(".aside--button").on("click", function() {
+        $(this).toggleClass("categories-block--open");
+        $(".filter").toggleClass("filter-open");
+    });
+    
 });
 
 

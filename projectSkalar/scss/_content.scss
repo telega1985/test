@@ -386,6 +386,79 @@ main {
     }
 }
 
+.aside--button {
+    margin-bottom: 10px;
+    width: 25px;
+    display: none;
+    position: absolute;
+    top: -55px;
+}
+
+
+@media (max-width: 1199px) {
+    main {
+        width: 65%;
+    }
+    aside {
+        width: 30%;
+        position: relative;
+    }
+    .card {
+        width: 47%;
+    }
+}
+
+@media (max-width: 991px) {
+    .content {
+        &-menu {
+            &--item {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-wrap: wrap;
+    }
+    main {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .aside--button {
+        display: block;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .filter {
+        position: absolute;
+        z-index: 200;
+        width: 100%;
+        left: -200%;
+        transition: .3s;
+        &-open {
+            left: 0;
+        }
+    }
+}
+
+@media (max-width: 502px) {
+    .top-menu {
+        display: none;
+    }
+    .card {
+        width: 100%;
+    }
+    .paginations {
+        &-link {
+            font-size: 0;
+        }
+    }
+}
 
 
 
